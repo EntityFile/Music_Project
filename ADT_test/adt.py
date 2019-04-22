@@ -26,7 +26,7 @@ class PlayList:
 
         """
         if self.length() != 0:
-            self._clipboard = self._data[:]
+            self._clipboard.append(self._data[:])
 
     def clear(self):
         """
@@ -89,13 +89,20 @@ class PlayList:
         Sets playlist to the previous status.
 
         """
-        self._data = self._clipboard[:]
+        if len(self._clipboard) == 0:
+            self._data = self._clipboard[:]
+        else:
+            self._data = self._clipboard[len(self._clipboard) - 1]
+            self._clipboard.pop()
 
     def __str__(self):
         return str([(song.artist, song.track_name) for song in self._data])
 
     def print_clipboard(self):
-        return str([(song.artist, song.track_name) for song in self._clipboard])
+        if len(self._clipboard) == 0:
+            return str([(song.artist, song.track_name) for song in self._clipboard])
+        else:
+            return str([(song.artist, song.track_name) for song in self._clipboard[len(self._clipboard) - 1]])
 
     def remove(self, index):
         """
