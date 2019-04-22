@@ -1,4 +1,4 @@
-from adt import PlayList, Song
+from API_DEMO import PlayList, Song
 
 
 playlist = PlayList()
@@ -93,14 +93,14 @@ playlist2.add(song4)
 playlist2.add(song1)
 playlist2.add(song3)
 playlist2.add(song2)
-print(playlist)
-print(playlist2)
+print('Playlist1:', playlist)
+print('Playlist2:', playlist2)
 print(playlist == playlist2)
 print()
 
 # Changing second playlist.
 playlist2.change_position(0, 1)
-print(playlist)
-print(playlist2)
+print('Playlist1:', playlist)
+print('Playlist2:', playlist2)
 print(playlist == playlist2)
 print()
