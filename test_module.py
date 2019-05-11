@@ -5,7 +5,7 @@ from data_module import Song, Itunes, YouTube
 
 
 def input_track_name():
-    name = input('Type track name title: ').split()
+    name = input('Type track name title, which you like: ').split()
     name = ' '.join(name)
     return name
 
