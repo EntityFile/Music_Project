@@ -30,7 +30,7 @@
 
 1) Якщо ввести 'hello', то програма виведе на екран наступний список треків:
 
-1 Adele : Hello
+1 Adele : Hello\t
 2 Lionel Richie : Hello
 3 HELLO : New York Groove
 4 Martin Solveig & Dragonette : Hello
