@@ -121,42 +121,84 @@
 
 2) Тоді можемо додати певного автора до чорного списк, щоб оптимізувати пошук. Наприклад введемо track 3. Тоді ми отримаємо наступне поле:
 
+
 Artist: HELLO
+
 Track name: New York Groove
+
 Genre: Rock
+
 YouTube video title: New York Groove - Hello
+
 YouTube video URL: https://www.youtube.com/watch?v=Zox2qo-wzb0
-    
+
+
+
+
 
 back - Back to the main menu
+
 add to playlist - Add this song to the playlist
+
 add to blacklist - Add this song to the blacklist
+
 add genre to blacklist - Add the genre of this song to the blacklist
+
 add artist to blacklist - Add the artist to the blacklist
+
 lyrics - Get the lyrics
+
 find by genre - Shows potentially interesting songs by genre
+
 find by artist - Shows potentially interesting songs by artist
 
+
+
 3) Додамо автора до чорного списку. Вводимо add artist to blacklist.
-4) Тепер спробуємо знову зробити запит на пошук. Вводимо back, потім search і знову 'hello'. Отримуємо наступний список треків( вже без групи HELLO):
+
+4) Тепер спробуємо знову зробити запит на пошук. Вводимо back, потім search і знову 'hello'. Отримуємо наступний список треків( вже без 
+групи HELLO):
+
+
 
 1 Adele : Hello
+
 2 Lionel Richie : Hello
+
 3 Martin Solveig & Dragonette : Hello
+
 4 Karmin : Brokenhearted
+
 5 J. Cole : Hello
+
 6 OMfG : Hello
+
 7 Karmin : Hello
+
 8 Zooey Deschanel : Hello
+
 9 Lil Wayne : Hello (feat. Shane Heyl)
+
 10 Kelly Clarkson : Hello
+
 11 Eminem : Hello
+
 12 Lionel Richie : Hello (feat. Jennifer Nettles)
+
 13 Glee Cast : Hello (Glee Cast Version) [feat. Jonathan Groff]
+
 14 T.I. : Hello (feat. CeeLo Green)
+
 15 Glee : Hell-O
+
 16 Prince : Hello
+
 17 Evanescence : Hello
+
 18 T.I. : Hello (feat. Governor)
+
 19 Disturbed : The Sound of Silence
+
 20 The Game : Hello (feat. Lloyd)
+
+
