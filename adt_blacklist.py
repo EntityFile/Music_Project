@@ -83,7 +83,7 @@ class BlackList:
         :param index: position.
         :return: Returns item on that position
         """
-        assert index >= 0 and index < self.songs_length(), 'Wrong index variable.'
+        # assert index >= 0 and index < self.songs_length(), 'Wrong index variable.'
         return self._songs_data[index]
     
     def get_genre(self, index):

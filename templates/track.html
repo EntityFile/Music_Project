@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h3>{{ name }}</h3>
+<a href="/playlist_add?song={{ name }}">
+    <button>Add to playlist</button>
+</a>
+<a href="/blacklist_add?song={{ name }}">
+    <button>Add to blacklist</button>
+</a>
+<a href="/blacklist_add_genre?song={{ name }}">
+    <button>Add genre to blacklist</button>
+</a>
+<a href="/blacklist_add_artist?song={{ name }}">
+    <button>Add artist to blacklist</button>
+</a>
+<p></p>
+<p>
+    <a href="/lyrics?song={{ name }}" >
+        <button>Get Lyrics</button>
+    </a>
+</p>
+<a href="/find_by_genre?song={{ name }}">
+    <button>Find track by genre</button>
+</a>
+<a href="/find_by_artist?song={{ name }}">
+    <button>Find track by artist</button>
+</a>
+<p><b>Artist:</b> {{ name.artist }}</p>
+<p><b>Track name:</b> {{ name.track_name }}</p>
+<p><b>Genre:</b> {{ name.genre }}</p>
+<p><b>iTunes track url:</b> <a href="{{ name.track_url }}">{{ name.track_url }}</a></p>
+<iframe width="640" height="480" src="{{ video.url }}?autoplay=0">
+</iframe>
+{% endblock %}

@@ -55,7 +55,7 @@ class PlayList:
         :param index: position.
         :return: Returns item on that position
         """
-        assert index >= 0 and index < self.length(), 'Wrong index variable.'
+        #assert index >= 0 and index < self.length(), 'Wrong index variable.'
         return self._data[index]
 
     def __contains__(self, song):
@@ -87,6 +87,8 @@ class PlayList:
         Sets playlist to the previous status.
 
         """
+        print(self._data)
+        print(self._clipboard)
         if len(self._clipboard) == 0:
             self._data = self._clipboard[:]
         else:

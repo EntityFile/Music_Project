@@ -9,7 +9,6 @@ class YouTube:
         self.track = track
         self.url = None
         self.title = None
-        self.lyrics = None
 
     def get_info(self):
         url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=' + '%20'.join(
@@ -24,7 +23,7 @@ class YouTube:
                 if i > 25:
                     break
             self.title = f['items'][i]['snippet']['title']
-            self.url = 'https://www.youtube.com/watch?v=' + f['items'][i]['id']['videoId']
+            self.url = 'https://www.youtube.com/embed/' + f['items'][i]['id']['videoId']
         except:
             print('Wrong artist/track name!', f['items'])
 
@@ -56,7 +55,7 @@ class Song:
         self.artist = None
         self.track_name = None
         self.type = None
-        self.lyrics = None
+        self.lyrics = ''
         self.iri_artist = None
         self.iri_track_name = None
 
@@ -123,6 +122,7 @@ class Song:
     def get_lyrics(self):
         artist = iri_conventer(self.artist)
         track_name = iri_conventer(self.track_name)
+        print(artist, track_name)
         try:
             url = "https://private-anon-dbc5463fb7-lyricsovh.apiary-proxy.com/v1/" + artist + "/" + track_name
             content = urllib.request.urlopen(url)
@@ -144,7 +144,7 @@ class Song:
             return type(self) == type(other)
 
     def __str__(self):
-        return self.artist + ' : ' + self.track_name
+        return self.artist + ' - ' + self.track_name
     
 
 def iri_conventer(text):
@@ -157,3 +157,24 @@ def iri_conventer(text):
         quote(parts.fragment),
     ))
     return url_code
+
+
+def find_songs(name):
+    """
+    Creates tracks list by inputed string
+    :param name: searching key
+    :return: list of songs
+    """
+    name = iri_conventer(name)
+    itunes_info = Itunes(name)
+    title_list = []
+    songs = itunes_info.return_songs()
+    songs_list = []
+    for i in range(itunes_info.ids):
+        if songs[i]['wrapperType'] == 'track':
+            song = Song()
+            song.get_data(songs, i)
+            if not (song.artist, song.track_name) in title_list:
+                title_list.append((song.artist, song.track_name))
+                songs_list.append(song)
+    return songs_list

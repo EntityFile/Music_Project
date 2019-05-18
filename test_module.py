@@ -5,7 +5,7 @@ from data_module import Song, Itunes, YouTube
 
 
 def input_track_name():
-    name = input('Type track name title, which you like: ').split()
+    name = input('Type track name title: ').split()
     name = ' '.join(name)
     return name
 
@@ -31,6 +31,17 @@ def create_search_list(name, blacklist):
         if songs[i]['wrapperType'] == 'track':
             song = Song()
             song.get_data(songs, i)
+            try:
+                ind = song.artist.index('&')
+                song.artist = song.artist[:ind] + song.artist[ind + 1:]
+            except ValueError:
+                pass
+            try:
+                ind = song.genre.index('&')
+                song.genre = song.genre[:ind] + song.genre[ind + 1:]
+            except ValueError:
+                pass
+
             if not (song.artist, song.track_name) in title_list:
                 if song not in blacklist:
                     if not blacklist.contains_artist(song.artist):
@@ -72,13 +83,13 @@ def find_by_playlist(songs_list, playlist, blacklist):
             num = genres_list.count(genre)
             if num > best_genre[1]:
                 best_genre = (genre, num)
-        print(best_genre[0])
+        # print(best_genre[0])
         new_songs_list = create_search_list(best_genre[0], blacklist)
         for track_num in range(len(new_songs_list)):
             print(track_num + 1, new_songs_list[track_num])
         if not new_songs_list:
             new_songs_list = songs_list
-        print(best_genre[0])
+        # print(best_genre[0])
         return new_songs_list
     else:
         return songs_list
@@ -173,6 +184,8 @@ remove artist {artist number} - Removes this artist from the blacklist(Input exa
                     track_information(song, youtube_info)
                     while True:
                         print('''
+Commands:
+
 back - Back to the main menu
 add to playlist - Add this song to the playlist
 add to blacklist - Add this song to the blacklist
