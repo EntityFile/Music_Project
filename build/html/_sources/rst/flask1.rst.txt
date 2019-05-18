@@ -1,0 +1,7 @@
+flask1 module
+=============
+
+.. automodule:: flask1
+    :members:
+    :undoc-members:
+    :show-inheritance:

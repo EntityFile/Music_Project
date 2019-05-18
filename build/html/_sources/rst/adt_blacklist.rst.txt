@@ -1,0 +1,7 @@
+adt\_blacklist module
+=====================
+
+.. automodule:: adt_blacklist
+    :members:
+    :undoc-members:
+    :show-inheritance:

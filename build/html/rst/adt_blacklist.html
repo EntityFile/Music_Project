@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>adt_blacklist module &#8212; music 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-adt_blacklist">
+<span id="adt-blacklist-module"></span><h1>adt_blacklist module<a class="headerlink" href="#module-adt_blacklist" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="adt_blacklist.BlackList">
+<em class="property">class </em><code class="descclassname">adt_blacklist.</code><code class="descname">BlackList</code><a class="headerlink" href="#adt_blacklist.BlackList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="adt_blacklist.BlackList.add_artist">
+<code class="descname">add_artist</code><span class="sig-paren">(</span><em>artist</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.add_artist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the artist into new position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>artist</strong> – genre that have to be placed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.add_genre">
+<code class="descname">add_genre</code><span class="sig-paren">(</span><em>genre</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.add_genre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the genre into new position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>genre</strong> – genre that have to be placed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.add_song">
+<code class="descname">add_song</code><span class="sig-paren">(</span><em>song</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.add_song" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the song into new position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>song</strong> – song that have to be placed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.artists_length">
+<code class="descname">artists_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.artists_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the artists quantity in blacklist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the atrists quantity in blacklist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the playlist. Updates the clipboard. Returns data from the clipboard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns data from the clipboard</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.contains_artist">
+<code class="descname">contains_artist</code><span class="sig-paren">(</span><em>artist</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.contains_artist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the artist is in the blacklist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>artist</strong> – Genre type object</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns True if genre in blacklist and False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.contains_genre">
+<code class="descname">contains_genre</code><span class="sig-paren">(</span><em>genre</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.contains_genre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the genre is in the blacklist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>genre</strong> – Genre type object</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns True if genre in blacklist and False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.genres_length">
+<code class="descname">genres_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.genres_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the genres quantity in blacklist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the genres quantity in blacklist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.get_artist">
+<code class="descname">get_artist</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.get_artist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the contents of the element at position [index]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – position.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns item on that position</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.get_genre">
+<code class="descname">get_genre</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.get_genre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the contents of the element at position [index]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – position.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns item on that position</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.remove_artist">
+<code class="descname">remove_artist</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.remove_artist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes artist on the position index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – artist position</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns deleted artist</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.remove_genre">
+<code class="descname">remove_genre</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.remove_genre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes genre on the position index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – genre position</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns deleted genre</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.remove_song">
+<code class="descname">remove_song</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.remove_song" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes song on the position index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – song position</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns deleted song</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.set_artist">
+<code class="descname">set_artist</code><span class="sig-paren">(</span><em>index</em>, <em>artist</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.set_artist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the atist into new position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> – position.</p></li>
+<li><p><strong>artist</strong> – artist that have to be placed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.set_genre">
+<code class="descname">set_genre</code><span class="sig-paren">(</span><em>index</em>, <em>genre</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.set_genre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the genre into new position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> – position.</p></li>
+<li><p><strong>genre</strong> – genre that have to be placed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_blacklist.BlackList.songs_length">
+<code class="descname">songs_length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adt_blacklist.BlackList.songs_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the songs quantity in blacklist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the songs quantity in blacklist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">music</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, entityfile.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/rst/adt_blacklist.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

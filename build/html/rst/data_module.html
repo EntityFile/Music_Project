@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>data_module module &#8212; music 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-data_module">
+<span id="data-module-module"></span><h1>data_module module<a class="headerlink" href="#module-data_module" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="data_module.Itunes">
+<em class="property">class </em><code class="descclassname">data_module.</code><code class="descname">Itunes</code><span class="sig-paren">(</span><em>inpt</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Itunes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="data_module.Itunes.get_songs">
+<code class="descname">get_songs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Itunes.get_songs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data_module.Itunes.return_songs">
+<code class="descname">return_songs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Itunes.return_songs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data_module.Song">
+<em class="property">class </em><code class="descclassname">data_module.</code><code class="descname">Song</code><a class="headerlink" href="#data_module.Song" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="data_module.Song.get_artist_id">
+<code class="descname">get_artist_id</code><span class="sig-paren">(</span><em>songs</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Song.get_artist_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data_module.Song.get_artist_name">
+<code class="descname">get_artist_name</code><span class="sig-paren">(</span><em>songs</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Song.get_artist_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data_module.Song.get_data">
+<code class="descname">get_data</code><span class="sig-paren">(</span><em>songs</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Song.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receives data from iTunes output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>songs</strong> – iTunes output list</p></li>
+<li><p><strong>index</strong> – index of the song in songs list</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="data_module.Song.get_genre">
+<code class="descname">get_genre</code><span class="sig-paren">(</span><em>songs</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Song.get_genre" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data_module.Song.get_lyrics">
+<code class="descname">get_lyrics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Song.get_lyrics" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data_module.Song.get_track_id">
+<code class="descname">get_track_id</code><span class="sig-paren">(</span><em>songs</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Song.get_track_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data_module.Song.get_track_name">
+<code class="descname">get_track_name</code><span class="sig-paren">(</span><em>songs</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Song.get_track_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data_module.Song.get_track_url">
+<code class="descname">get_track_url</code><span class="sig-paren">(</span><em>songs</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Song.get_track_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data_module.Song.get_type">
+<code class="descname">get_type</code><span class="sig-paren">(</span><em>songs</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.Song.get_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="data_module.YouTube">
+<em class="property">class </em><code class="descclassname">data_module.</code><code class="descname">YouTube</code><span class="sig-paren">(</span><em>artist</em>, <em>track</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.YouTube" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="data_module.YouTube.get_info">
+<code class="descname">get_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#data_module.YouTube.get_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="data_module.find_songs">
+<code class="descclassname">data_module.</code><code class="descname">find_songs</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.find_songs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="data_module.iri_conventer">
+<code class="descclassname">data_module.</code><code class="descname">iri_conventer</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.iri_conventer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="data_module.show_search_results">
+<code class="descclassname">data_module.</code><code class="descname">show_search_results</code><span class="sig-paren">(</span><em>name</em>, <em>blacklist</em><span class="sig-paren">)</span><a class="headerlink" href="#data_module.show_search_results" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">music</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, entityfile.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/rst/data_module.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,7 @@
+adt\_test module
+================
+
+.. automodule:: adt_test
+    :members:
+    :undoc-members:
+    :show-inheritance:

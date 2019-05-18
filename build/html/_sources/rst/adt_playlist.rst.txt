@@ -1,0 +1,7 @@
+adt\_playlist module
+====================
+
+.. automodule:: adt_playlist
+    :members:
+    :undoc-members:
+    :show-inheritance:

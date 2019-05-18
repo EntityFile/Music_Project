@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>adt_playlist module &#8212; music 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-adt_playlist">
+<span id="adt-playlist-module"></span><h1>adt_playlist module<a class="headerlink" href="#module-adt_playlist" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="adt_playlist.PlayList">
+<em class="property">class </em><code class="descclassname">adt_playlist.</code><code class="descname">PlayList</code><a class="headerlink" href="#adt_playlist.PlayList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="adt_playlist.PlayList.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>song</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_playlist.PlayList.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the song into new position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>song</strong> – song that have to be placed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_playlist.PlayList.change_position">
+<code class="descname">change_position</code><span class="sig-paren">(</span><em>index1</em>, <em>index2</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_playlist.PlayList.change_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes two songs in places.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index1</strong> – position of the first song</p></li>
+<li><p><strong>index2</strong> – position of the second song</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_playlist.PlayList.clear">
+<code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adt_playlist.PlayList.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the playlist. Updates the clipboard. Returns data from the clipboard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns data from the clipboard</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_playlist.PlayList.length">
+<code class="descname">length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adt_playlist.PlayList.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the length of the playlist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns the length of the playlist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_playlist.PlayList.print_clipboard">
+<code class="descname">print_clipboard</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adt_playlist.PlayList.print_clipboard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="adt_playlist.PlayList.pull_back">
+<code class="descname">pull_back</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adt_playlist.PlayList.pull_back" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets playlist to the previous status.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_playlist.PlayList.remove">
+<code class="descname">remove</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#adt_playlist.PlayList.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes song on the position index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – song position</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns deleted song</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="adt_playlist.PlayList.update_clipboard">
+<code class="descname">update_clipboard</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adt_playlist.PlayList.update_clipboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the clipboard.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">music</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, entityfile.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/rst/adt_playlist.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
