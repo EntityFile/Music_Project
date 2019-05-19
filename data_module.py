@@ -58,6 +58,7 @@ class Song:
         self.lyrics = ''
         self.iri_artist = None
         self.iri_track_name = None
+        self.icon = None
 
     def get_data(self, songs, index):
         """
@@ -73,6 +74,7 @@ class Song:
         self.get_artist_name(songs, index)
         self.get_track_name(songs, index)
         self.get_type(songs, index)
+        self.get_icon(songs, index)
 
     def get_artist_id(self, songs, index):
         try:
@@ -116,6 +118,12 @@ class Song:
     def get_type(self, songs, index):
         try:
             self.type = songs [index] ['wrapperType']
+        except KeyError:
+            pass
+    
+    def get_icon(self, songs, index):
+        try:
+            self.icon = songs[index]['artworkUrl100']
         except KeyError:
             pass
 

@@ -41,7 +41,7 @@ def blacklist():
     return render_template("blacklist.html", name=black_list)
 
 
-@app.route("/playlist_remove", methods=['POST'])
+@app.route("/playlist_remove", methods=['GET'])
 def remove_playlist():
     """
     Removes song from the playlist
@@ -54,7 +54,7 @@ def remove_playlist():
             return render_template("playlist.html", name=play_list)
 
 
-@app.route("/blacklist_remove_song", methods=['POST'])
+@app.route("/blacklist_remove_song", methods=['GET'])
 def remove_blacklist_song():
     """
     Removes song from the blacklist
@@ -67,7 +67,7 @@ def remove_blacklist_song():
             return render_template("blacklist.html", name=black_list)
 
 
-@app.route("/blacklist_remove_genre", methods=['POST'])
+@app.route("/blacklist_remove_genre", methods=['GET'])
 def remove_blacklist_genre():
     """
     Removes genre from the blacklist
@@ -90,7 +90,7 @@ def playlist_clear():
     return render_template("playlist.html", name=play_list)
 
 
-@app.route("/blacklist_remove_artist", methods=['POST'])
+@app.route("/blacklist_remove_artist", methods=['GET'])
 def remove_blacklist_artist():
     """
     Removes artist from the blacklist
@@ -224,17 +224,26 @@ def get_info():
     return show_track_info(name)
 
 
-# @app.route("/get_pl_info")
-# def get_pl_info():
-#    song_id = request.args["song"]
-#    name = songs[name]
-#    # name.get_lyrics()
-#    # name.lyrics = name.lyrics.split('\n')
-#    name.lyrics = 'anime'
-#    video = YouTube(name.iri_artist, name.iri_track_name)
-#    video.get_info()
-#    return render_template("track.html", name=name, video=video)
-#    return show_track_info(name)
+@app.route("/get_pl_info")
+def get_pl_info():
+    song_id = int(request.args["song"])
+    for i in range(play_list.length()):
+        if play_list._data[i].track_id == song_id:
+            name = play_list._data[i]
+            video = YouTube(name.iri_artist, name.iri_track_name)
+            video.get_info()
+            return render_template("track.html", name=name, video=video)
+
+
+@app.route("/get_bl_info")
+def get_bl_info():
+    song_id = int(request.args["song"])
+    for i in range(black_list.songs_length()):
+        if black_list._songs_data[i].track_id == song_id:
+            name = black_list._songs_data[i]
+            video = YouTube(name.iri_artist, name.iri_track_name)
+            video.get_info()
+            return render_template("track.html", name=name, video=video)
 
 
 @app.route("/register", methods=["POST"])
