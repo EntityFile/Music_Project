@@ -12,9 +12,7 @@
     <p><b>Your tracks:</b></p>
     {% for i in name %}
         <hr size="1">
-        <form action="/playlist_remove?song={{ i.track_id }}" method="post">
-            {{ i }}
-            <button>Remove</button>
-        </form>
+        <a href="/get_pl_info?song={{ i.track_id }}">{{ i }}</a>
+        <a href="/playlist_remove?song={{ i.track_id }}"><button>Remove</button></a>
     {% endfor %}
 {% endblock %}

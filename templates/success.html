@@ -1,23 +1,62 @@
-{% extends "index.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .newpos {
+            font-size: 20px;
+            position: absolute;
+            left: 115px;
+        }
+        .newpos2 {
+            position: relative;
+            top: -45px;
+            left: 5px;
+        }
+        .newpos3 {
+            font-size: 20px;
+            position: absolute;
+            left: 117px;
+        }
+        .newpos5 {
+            font-size: 20px;
+            position: absolute;
+            left: 180px;
+        }
+        .newpos4 {
+            position: relative;
+            top: 70px;
+            left: -628px;
+        }
+    </style>
+</head>
+<body>
+    {% extends "index.html" %}
 
-{% block body %}
-{% for i in name %}
-<p>
-    <a name="track" href="/get_info?song={{ i }}">{{ i }}</a>
-    <a href="/playlist_add_static?song={{ i }}">
-        <button><img src="http://www.stickpng.com/assets/images/588a64e7d06f6719692a2d11.png" width="14" height="14" > Add to playlist</button>
-    </a>
-    <a href="/blacklist_add_static?song={{ i }}">
-        <button>Add to blacklist</button>
-    </a>
-    <a href="/blacklist_add_genre_static?song={{ i }}">
-        <button>Add genre to blacklist</button>
-    </a>
-    <a href="/blacklist_add_artist_static?song={{ i }}">
-        <button>Add artist to blacklist</button>
-    </a>
-</p>
-<p><b>Genre:</b> {{ i.genre }}</p>
-<hr size="1">
-{% endfor %}
-{% endblock %}
+    {% block body %}
+
+    {% for i in name %}
+    <p>
+        <a name="track" href="/get_info?song={{ i }}"><img src="{{ i.icon }}">
+        </a>
+        <a class="newpos2" href="/playlist_add_static?song={{ i }}">
+            <button><img src="http://www.stickpng.com/assets/images/588a64e7d06f6719692a2d11.png" width="14" height="14" > Add to playlist</button>
+        </a>
+        <a class="newpos2" href="/blacklist_add_static?song={{ i }}">
+            <button>Add to blacklist</button>
+        </a>
+        <a class="newpos2" href="/blacklist_add_genre_static?song={{ i }}">
+            <button>Add genre to blacklist</button>
+        </a>
+        <a class="newpos2" href="/blacklist_add_artist_static?song={{ i }}">
+            <button>Add artist to blacklist</button>
+        </a>
+        <a class="newpos" name="track" href="/get_info?song={{ i }}">
+            {{ i }}
+        </a>
+    <font class="newpos4"><b class="newpos3">Genre:</b><font class="newpos5"> {{ i.genre }}</font></font>
+    </p>
+    <hr size="1">
+    {% endfor %}
+    {% endblock %}
+</body>
+</html>
